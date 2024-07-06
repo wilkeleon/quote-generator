@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="img/png" href="./icon (1).png" />
+    <style>
+      *,
+      * ::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+      }
+
+      :root {
+        --main-background-color: #5372f0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #5372f0;
+      }
+
+      .mainContainer {
+        background-color: white;
+        max-width: 50%;
+        margin-inline: auto;
+        margin-top: 10rem;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.75rem;
+      }
+
+      p {
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      hr {
+        margin: 2rem 0 1rem 0;
+      }
+
+      .buttonsContainer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .newQuote {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
+        background-color: var(--main-background-color);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 30px;
+      }
+
+      svg {
+        color: #5372f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <h1>Quote of the Day</h1>
+      <p id="quote"></p>
+      <hr style="opacity: 0.4" />
+      <div class="buttonsContainer">
+        <div class="icons">
+          <a href="#" class="copyBtn"
+            ><img
+              src="./icons8-copy-60.png"
+              alt="copy icon"
+              width="20"
+              height="20"
+          /></a>
+          <a href="#"></a>
+          <a href="https://x.com/compose/post" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0,0,300,150"
+            >
+              <g
+                fill="#5372f0"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <g transform="scale(8.53333,8.53333)">
+                  <path
+                    d="M28,6.937c-0.957,0.425 -1.985,0.711 -3.064,0.84c1.102,-0.66 1.947,-1.705 2.345,-2.951c-1.03,0.611 -2.172,1.055 -3.388,1.295c-0.973,-1.037 -2.359,-1.685 -3.893,-1.685c-2.946,0 -5.334,2.389 -5.334,5.334c0,0.418 0.048,0.826 0.138,1.215c-4.433,-0.222 -8.363,-2.346 -10.995,-5.574c-0.458,0.788 -0.721,1.704 -0.721,2.683c0,1.85 0.941,3.483 2.372,4.439c-0.874,-0.028 -1.697,-0.268 -2.416,-0.667c0,0.023 0,0.044 0,0.067c0,2.585 1.838,4.741 4.279,5.23c-0.447,0.122 -0.919,0.187 -1.406,0.187c-0.343,0 -0.678,-0.034 -1.003,-0.095c0.679,2.119 2.649,3.662 4.983,3.705c-1.825,1.431 -4.125,2.284 -6.625,2.284c-0.43,0 -0.855,-0.025 -1.273,-0.075c2.361,1.513 5.164,2.396 8.177,2.396c9.812,0 15.176,-8.128 15.176,-15.177c0,-0.231 -0.005,-0.461 -0.015,-0.69c1.043,-0.753 1.948,-1.692 2.663,-2.761z"
+                  ></path>
+                </g>
+              </g></svg
+          ></a>
+        </div>
+        <button class="newQuote" onclick="generateQuote()">New Quote</button>
+      </div>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
